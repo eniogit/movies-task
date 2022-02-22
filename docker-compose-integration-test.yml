@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile-integration-test
+    env_file: .envs/test.env
+    depends_on:
+      - db
+      - auth
+  db:
+    image: postgres
+    env_file: .envs/test.env
+  auth:
+    build:
+      context: nodejs-recruitment-task/
+      dockerfile: Dockerfile
+    env_file: .envs/test.env

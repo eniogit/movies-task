@@ -1,0 +1,10 @@
+GET http://localhost:3001/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyMywibmFtZSI6IkJhc2ljIFRob21hcyIsInJvbGUiOiJiYXNpYyIsImlhdCI6MTY0NTM0ODM3MiwiZXhwIjoxNjQ1MzUwMTcyLCJpc3MiOiJodHRwczovL3d3dy5uZXRndXJ1LmNvbS8iLCJzdWIiOiIxMjMifQ.R81J60RTgw5tKHZztqiuAEXQWbGpmI8QztYOvXtO3MQ
+###
+POST http://localhost:3001/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyMywibmFtZSI6IkJhc2ljIFRob21hcyIsInJvbGUiOiJiYXNpYyIsImlhdCI6MTY0NTQxOTc2MSwiZXhwIjoxNjQ1NDIxNTYxLCJpc3MiOiJodHRwczovL3d3dy5uZXRndXJ1LmNvbS8iLCJzdWIiOiIxMjMifQ.UQfjLDauzeREEw6_v8Wq4RfbVKzM8GSS_R5a7yrmSfI
+Content-Type: application/json
+
+{
+  "title": "Test"
+}

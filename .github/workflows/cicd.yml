@@ -1,0 +1,23 @@
+name: Unit and Integration Tests CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Unit Test
+      run: npm install && npm run test
+  integration-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Building image
+      run: docker-compose -f docker-compose-integration-test.yml build
+    - name: Integration Test
+      run: docker-compose -f docker-compose-integration-test.yml run --rm app
